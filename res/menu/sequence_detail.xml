@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:id="@+id/menu_sequence_detail_back"
+		android:icon="@drawable/menu_back" android:title="@string/menu_back" />
+
+	<item android:id="@+id/menu_sequence_detail_save_sequence"
+		android:icon="@drawable/menu_save_sequence"
+		android:title="@string/menu_save_sequence" />
+
+
+	<item android:id="@+id/menu_sequence_detail_email_sequence"
+		android:icon="@drawable/menu_email"
+		android:title="@string/menu_email_sequence" />
+
+</menu>

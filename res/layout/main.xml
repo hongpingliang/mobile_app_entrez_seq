@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.bim.es"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:id="@+id/main" android:orientation="vertical">
+
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/main_button_layout"
+		android:layout_centerHorizontal="true" android:orientation="vertical"
+		android:layout_height="wrap_content">
+
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:paddingTop="5dip" android:background="@color/gray">
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="0.1" />
+
+			<Button android:id="@+id/main_clear_button"
+				android:text="@string/clear" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="0.35" />
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="0.1" />
+
+
+			<Button android:id="@+id/main_search_button"
+				android:text="@string/search" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="0.35" />
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="0.1" />
+		</LinearLayout>
+
+		<!-- Place an AdMob ad at the bottom of the screen. -->
+		<!-- It has white text on a black background. -->
+		<!-- The description of the surrounding context is 'Android game'. -->
+		<com.admob.android.ads.AdView android:id="@+id/ad"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" app:backgroundColor="#000000"
+			app:primaryTextColor="#FFFFFF" app:secondaryTextColor="#CCCCCC"
+			app:keywords="restaurant,coupon" />
+	</LinearLayout>
+
+
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_above="@+id/main_button_layout"
+		android:layout_height="fill_parent" android:background="@color/white"
+		android:textColor="@color/black">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:orientation="vertical"
+			android:paddingTop="5dip" android:paddingLeft="2dip"
+			android:paddingBottom="30dip" android:paddingRight="6dip">
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<EditText android:id="@+id/main_search_term_text"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:padding="3dip"
+					android:text="" android:scrollHorizontally="true"
+					android:hint="@string/main_term_hint"
+					android:imeOptions="actionDone" />
+			</LinearLayout>
+
+
+			<RadioGroup android:id="@+id/main_db_radiog"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_gravity="center_horizontal">
+
+				<RadioButton android:text="@string/main_dna"
+					android:layout_width="fill_parent" android:id="@+id/main_db_dna"
+					android:layout_height="wrap_content" android:textSize="12sp"
+					android:textColor="@color/gray" />
+
+				<RadioButton android:text="@string/main_protein"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:textSize="12sp"
+					android:layout_marginLeft="15dip" android:textColor="@color/gray"
+					android:id="@+id/main_db_protein" />
+			</RadioGroup>
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/main_exclude" android:textColor="@color/gray"
+				android:layout_marginLeft="15dip" />
+
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/main_exclude_sts_layout"
+				android:layout_gravity="center_vertical">
+
+				<CheckBox android:id="@+id/main_exclude_sts_checkbox"
+					android:text="@string/main_exclude_sts"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/gray" android:layout_marginLeft="48dip"
+					android:layout_gravity="center_vertical" />
+
+				<CheckBox android:id="@+id/main_exclude_wd_checkbox"
+					android:text="@string/main_exclude_wd"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/gray" android:layout_marginLeft="25dip"
+					android:layout_gravity="center_vertical" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical">
+				<CheckBox android:id="@+id/main_exclude_tpa_checkbox"
+					android:text="@string/main_exclude_tpa"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/gray" android:layout_marginLeft="48dip"
+					android:layout_gravity="center_vertical" />
+
+				<CheckBox android:id="@+id/main_exclude_patent_checkbox"
+					android:text="@string/main_exclude_patent"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/gray" android:layout_marginLeft="30dip"
+					android:layout_gravity="center_vertical" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:id="@+id/main_molecule_layout"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_gravity="center_vertical">
+
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dip"
+					android:text="@string/main_molecule"
+					android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+				<Spinner android:id="@+id/main_molecule_spinner"
+					android:layout_width="200dip" android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false"
+					android:prompt="@string/main_molecule"
+					android:layout_marginLeft="40dip" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_gravity="center_vertical">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dip"
+					android:text="@string/main_gene_location"
+					android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+				<Spinner android:id="@+id/main_gene_loc_spinner"
+					android:layout_width="200dip" android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false"
+					android:prompt="@string/main_gene_location"
+					android:layout_marginLeft="40dip" />
+			</LinearLayout>
+
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_gravity="center_vertical">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dip"
+					android:text="@string/main_seg_seq" android:textColor="@color/gray"
+					android:layout_marginLeft="5dip" />
+
+				<Spinner android:id="@+id/main_seg_seq_spinner"
+					android:layout_width="200dip" android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false"
+					android:prompt="@string/main_seg_seq"
+					android:layout_marginLeft="40dip" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_gravity="center_vertical">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dip"
+					android:text="@string/main_seq_source"
+					android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+				<Spinner android:id="@+id/main_seq_source_dna_spinner"
+					android:layout_width="200dip" android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false"
+					android:prompt="@string/main_seq_source"
+					android:layout_marginLeft="40dip" />
+
+				<Spinner
+					android:id="@+id/main_seq_source_protein_spinner"
+					android:visibility="gone" android:layout_width="200dip"
+					android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false"
+					android:prompt="@string/main_seq_source"
+					android:layout_marginLeft="40dip" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_gravity="center_vertical">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dip"
+					android:text="@string/main_pub_date"
+					android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+				<Spinner android:id="@+id/main_pub_date_spinner"
+					android:layout_width="200dip" android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false"
+					android:prompt="@string/main_pub_date"
+					android:layout_marginLeft="40dip" />
+			</LinearLayout>
+
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:orientation="vertical"
+				android:layout_gravity="center_vertical">
+
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="15dip"
+					android:text="@string/main_mod_date"
+					android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+				<Spinner android:id="@+id/main_mod_date_spinner"
+					android:layout_width="200dip" android:layout_height="wrap_content"
+					android:drawSelectorOnTop="false"
+					android:prompt="@string/main_mod_date"
+					android:layout_marginLeft="40dip" />
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</RelativeLayout>

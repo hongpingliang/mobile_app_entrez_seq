@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:id="@+id/menu_my_sequence_back"
+		android:icon="@drawable/menu_back" android:title="@string/menu_back" />
+
+	<item android:id="@+id/menu_my_sequence_select_all"
+		android:icon="@drawable/menu_select_all"
+		android:title="@string/menu_select_all" />
+
+	<item android:id="@+id/menu_my_sequence_delete"
+		android:icon="@drawable/menu_delete"
+		android:title="@string/menu_delete" />
+
+	<item android:id="@+id/menu_my_sequence_email_sequence"
+		android:icon="@drawable/menu_email"
+		android:title="@string/menu_email_sequence" />
+</menu>

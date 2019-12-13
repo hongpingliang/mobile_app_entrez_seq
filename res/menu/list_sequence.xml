@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:id="@+id/menu_list_sequence_save_sequence"
+		android:icon="@drawable/menu_save_sequence"
+		android:title="@string/menu_save_sequences" />
+
+
+	<item android:id="@+id/menu_list_sequence_email_sequence"
+		android:icon="@drawable/menu_email"
+		android:title="@string/menu_email_sequences" />
+
+
+	<item android:id="@+id/menu_list_sequence_back"
+		android:icon="@drawable/menu_back" 
+		android:title="@string/menu_back" />
+		
+	<item android:id="@+id/menu_list_sequence_sort"
+		android:icon="@drawable/menu_sort" 
+		android:title="@string/menu_sort_sequence" />	
+		
+	<item android:id="@+id/menu_list_sequence_save_search"
+		android:icon="@drawable/menu_my_search" 
+		android:title="@string/menu_save_search" />			
+		
+
+</menu>

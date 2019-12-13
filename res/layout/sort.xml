@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:id="@+id/sort" android:background="@color/white"
+	android:orientation="vertical" android:paddingTop="30dip"
+	android:paddingLeft="60dip">
+
+
+	<RadioGroup android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="vertical"
+		android:id="@+id/sort_radio_group">
+		<RadioButton android:text="@string/sort_by_title"
+			android:textColor="@color/gray_darker" android:layout_width="fill_parent"
+			android:id="@+id/sort_by_title"
+			android:layout_marginBottom="20dip" />
+		<RadioButton android:text="@string/sort_by_gi"
+			android:textColor="@color/gray_darker" android:layout_width="fill_parent"
+			android:id="@+id/sort_by_gi"
+			android:layout_marginBottom="20dip" />
+		<RadioButton android:text="@string/sort_by_length"
+			android:textColor="@color/gray_darker" android:layout_width="fill_parent"
+			android:id="@+id/sort_by_length"
+			android:layout_marginBottom="20dip" />
+		<RadioButton android:text="@string/sort_by_locus"
+			android:textColor="@color/gray_darker" android:layout_width="fill_parent"
+			android:id="@+id/sort_by_locus" android:layout_marginBottom="20dip" />
+	</RadioGroup>
+</RelativeLayout>
