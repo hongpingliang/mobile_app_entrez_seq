@@ -1,6 +1,4 @@
-# mobile_app_entrez_seq
-
-# Andorid Mobile app "Entrez Sequence"
+# Andorid Mobile Free app "Entrez Sequence"
 
 With Entrez Sequence, search for nucleotide and protein sequences from your Android device. Nucleotide and protein sequences have been compiled from GenBank, RefSeq, PDB, SwissProt, PIR, and PRF databases. Want to know the nucleotide and protein sequences for HIV? Just type it into the search field and click search. Narrow your search to only include documents published within a certain time period, or to exclude working drafts or patents.
 
